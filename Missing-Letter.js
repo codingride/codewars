@@ -11,7 +11,6 @@ function findMissingLetter(array) {
        upper.push(index)
      }
   });
-  
   let begin = upper.length > 0 ? upper[0] : lower[0];
   let ending = upper.length > 0 ? upper[upper.length - 1] : lower[lower.length - 1];
   var counter = 0;
@@ -21,13 +20,11 @@ function findMissingLetter(array) {
       missing = letters[i].toUpperCase();
       break;
     }
-    
     if(lower.length > 0 && lower[counter] !== i) {
       missing = letters[i];
       break;
     }
     counter += 1;
   }
-  
   return missing;
 }
